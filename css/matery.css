@@ -323,6 +323,7 @@ header .brand-logo .logo-img {
 }
 
 header .brand-logo .logo-span {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1.6rem;
 }
 
@@ -602,6 +603,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 4rem;
     line-height: 1.2em;
     margin-bottom: 20px;
@@ -609,6 +611,7 @@ header .go-back i {
 }
 
 .bg-cover .description {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
