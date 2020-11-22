@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tarjan的学习, Hexo">
+    <meta name="keywords" content="取模意义的快速幂黑科技：龟速乘, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tarjan的学习 | Hexo</title>
+    <title>取模意义的快速幂黑科技：龟速乘 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Tarjan的学习</h1>
+                    <h1 class="description center-align post-title">取模意义的快速幂黑科技：龟速乘</h1>
                 </div>
             </div>
         </div>
@@ -463,284 +463,120 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>$Tarjan$是图论中求解关于图的连通性的相关问题的算法，$Tarjan$基于深搜$dfs$实现。</p>
-<p>利用两个关键数组：$dfn[],low[]$。</p>
-<p>$dfn[i]:$结点$i$的时间戳。</p>
-<p>$low[i]:$结点$i$所能遍历的所有结点的最小$dfn$，可以类比并查集的$fa[i]$理解。</p>
-<p>$id:$当前时间。</p>
-<p>每次我们从一个结点$u$开始搜索，我们结点$u$能遍历到的所有结点组成的树成为结点$u$的搜索树，同时我们利用栈来保存处于同一个强连通分量的结点。</p>
-<hr>
-<p>算法的流程：</p>
-<p>1.每次搜索到一个结点$u$，先初始化$dfn[u]=low[u]=++id$，然后结点$u$入栈。</p>
-<p>2.然后依次遍历结点$u$的子树$v$，如果该点没有搜索过即$(!dfn[v])$就$dfs(v)$，然后更新$low[u]=min(low[u],low[v])$。</p>
-<p>3.如果结点$v$搜索过且在栈中，说明该节点$v$可能是潜在的连通块的根，更新$low[u]=min(low[u],dfn[v])$，这里使用$dfn[v]$，因为$v$有可能属于别的连通块了。</p>
-<p>4.搜索完$u$的所有能遍历的结点后，判断$dfn[u]=low[u]$，如果相等说明$u$是强连通分量的一个根，此时属于这个强连通分量的所有结点的$low[v]=low[u]$，然后回溯栈中所有节点染色为同一个连通块，同时可以统计该连通块的个数。</p>
-<p>时间复杂度：$O(E+V)$</p>
-<hr>
-<p>$Tarjan$能解决的一些问题：</p>
-<p>1.判断图是否连通。<br>2.判断图的连通分量个数。<br>3.判断每个连通分量的结点数。<br>4.缩点，将<strong>有向有环图</strong>(无向有环图的一条边可等价为两个有向边)转换为<strong>有向无环图$(DAG)$</strong><br>5.找到所有缩点，缩边。<br>6.求删去一个结点后图的连通分量个数，即判断每个点的缩边个数。<br>7.缩点后建立$DAG$，实现拓扑排序，树形$dp$，点权和状态转移等操作。<br>8.求缩点后新图的点出度，入度情况。<br>$\dots\dots$<br>模板：</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">int n,m,dfn[N],low[N],id,vis[N],ans,col[N],num[N],sum=0;
-vector<int>e[N];  //dfs[i]记录结点i遍历顺序,low[i]记录结点i及其子结点最小遍历顺序,vis[i]标记是否在栈中。 
-stack<int>s;        //col[i]记录结点i属于那个连通块(本题没用),num[i]记录第i个连通块的结点数. 
-void dfs(int u){
-     dfn[u]=low[u]=++id;//记录dfs顺序 
-     s.push(u);//入栈 
-     vis[u]=1;//标记入栈. 
-     for(auto v:e[u]){
-          if(!dfn[v]){
-                dfs(v); //没有遍历的点进行遍历然后更新low 
-                low[u]=min(low[u],low[v]);
-          }
-          else if(vis[v]) low[u]=min(low[u],dfn[v]);//如果已经遍历过而且在栈中 则取low较小值(这里是潜在的连通块) 
-     }
-     if(dfn[u]==low[u]){ //该点是连通块的"根"  注意孤立点也是连通块. 
-         vis[u]=0;   //回溯标记，并染色. 
-         col[u]=++sum;
-         num[sum]++;
-         while(s.top()!=u){ //依次出栈. 
-             col[s.top()]=sum;
-              vis[s.top()]=0;
-              s.pop();
-              num[sum]++;
-         }
-         s.pop();
-     }
+                <p><strong>一般的快速幂：</strong></p>
+<pre class=" language-lang-cpp"><code class="language-lang-cpp">ll ksm(ll a,ll n,ll m){
+    ll ans=1;
+    while(n){
+        if(n&1) ans=ans*a%m;
+        a=a*a%m;
+        n>>=1;
+    }
+    return ans;
 }
 </code></pre>
-<p>求割点，只需要判断$low[v]\ge dfn[u]$即可，因为如果满足的话，显然去掉$u$后就不能访问$v$子树了，所以$u$就是割点，$edge(u,v)$就是割边。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">void dfs(int u,int fa){
-    dfn[u]=low[u]=++id;
-    for(int i=h[u];i;i=e[i].nt){
-        int v=e[i].to;
-        if(!dfn[v]){
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-            if(low[v]>=dfn[u]) cut[u]++; //关键
-        }
-        else if(v!=fa) low[u]=min(low[u],dfn[v]);
+<p>这样会存在一个问题，当求$a^b\pmod{m}，$且$a&gt;10^9$时，会存在爆$long\ long$的问题，这时候我们需要对乘法取模进行改正，于是便有了龟速乘。</p>
+<hr>
+<p><strong>龟速乘：</strong></p>
+<p>为什么要叫龟速乘呢，因为这个乘法运算比计算机底层的乘法速度要慢。<br>先看代码：</p>
+<pre class=" language-lang-cpp"><code class="language-lang-cpp">ll qmul(ll x,ll y,ll m){    //龟速乘 
+    ll s=0;
+    while(y){
+        if(y&1) s=(s+x)%m;
+        x=(x+x)%m;
+        y>>=1; 
     }
+    return s;
+}
+</code></pre>
+<p>形式与快速幂非常相似，只不过里面的乘法变成加法了，<br>比如$2\times 5= 2+2\times 4=2+4\times 2=2+8=10$。</p>
+<p>时间复杂度：$O(logy)$</p>
+<p>快速幂和龟速乘搭配一起就可以欢乐地进行模意义下的快速幂了。</p>
+<p>复杂度：$O(logn\times log(a))$</p>
+<pre class=" language-lang-cpp"><code class="language-lang-cpp">ll qmul(ll x,ll y,ll m){    //龟速乘 
+    ll s=0;
+    while(y){
+        if(y&1) s=(s+x)%m;
+        x=(x+x)%m;
+        y>>=1; 
+    }
+    return s;
+}
+///////////////
+ll ksm(ll a,ll n,ll m){
+    ll ans=1;
+    while(n){
+        if(n&1) ans=qmul(ans,a,m);
+        a=qmul(a,a,m);
+        n>>=1;
+    }
+    return ans;
 }
 </code></pre>
 <hr>
-<h2 id="1-POJ-2117​"><a href="#1-POJ-2117​" class="headerlink" title="1.POJ 2117​"></a>1.POJ 2117​</h2><p>无向图删去后一个点后的最多连通分量数。<br>思路：以$i$为根依次进行搜索，记录该点的割边数$cut[i]$，如果$cut[i]=0$，说明它是孤立点，删去它后贡献减1，如果$cut[i]=1$且它只有一个儿子，删去它后，连通分量个数还是$1$，贡献也是$cut[i]-1$，若$cut[i]&gt;1$，且$i$为根，则新增的连通分量数$cut[i]-1$，因为不包括自身的连通分量。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">void dfs(int u,int fa){
-    dfn[u]=low[u]=++id;
-    for(int i=h[u];i;i=e[i].nt){
-        int v=e[i].to;
-        if(!dfn[v]){
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-            if(low[v]>=dfn[u]) cut[u]++;
-        }
-        else if(v!=fa) low[u]=min(low[u],dfn[v]);
-    }
-}
-int main(){    
-    scanf("%d%d",&n,&m);
-    for(int i=1,u,v;i<=m;i++){
-        scanf("%d%d",&u,&v);add(u,v);
-    }
-    int tot=0,mx=-1;
-    for(int i=1;i<=n;i++){
-        if(!dfn[i]){
-            dfs(i,-1),tot++,cut[i]--;
-        }
-    }
-    for(int i=1;i<=n;i++) printf("%d ",tot+cut[i]);
-</code></pre>
-<h2 id="2-2020ICPC网络赛-D-Router-Mesh"><a href="#2-2020ICPC网络赛-D-Router-Mesh" class="headerlink" title="2. 2020ICPC网络赛 D.Router Mesh"></a>2. 2020ICPC网络赛 D.Router Mesh</h2><p>题意：给定无向图，求删去每个结点后的连通分量数。<br>思路：利用上题的方法求出$cut[i]$，然后用原连通分量数$tot+cut[i]$即可。</p>
-<h2 id="3-POJ-2553"><a href="#3-POJ-2553" class="headerlink" title="3.POJ 2553"></a>3.POJ 2553</h2><p>题意：求有向图缩点后连通分量没有出度的点。</p>
-<p>思路：$tarjan$缩点给连通块染色，然后判断每条边$edge(u,v)$的$bl[u]$是否等于$bl[v]$，如果不相等说明结点$bl[u]$这个连通分量有出度，最后输出$bl[u]=0$的点即可。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">void dfs(int u){
-    dfn[u]=low[u]=++id;
-    vis[u]=1,s.push(u);
-    for(int i=0;i<e[u].size();i++){
-        int v=e[u][i];
-        if(!dfn[v]){
-            dfs(v);
-            low[u]=min(low[u],low[v]);
-        }
-        else if(vis[v]) low[u]=min(low[u],dfn[v]);
-    }
-        if(dfn[u]==low[u]){
-            bl[u]=++tot,vis[u]=0;
-            while(s.top()!=u){
-                vis[s.top()]=0,bl[s.top()]=tot,s.pop();
-            }
-            s.pop();
-        }
-}
-    for(int u=1;u<=n;u++)
-        for(int j=0;j<e[u].size();j++){
-            if(bl[u]!=bl[e[u][j]]){
-                chu[bl[u]]=true;break;
-            }    
-        } 
-    for(int i=1;i<=n;i++)
-        if(!chu[bl[i]]) printf("%d ",i);
-</code></pre>
-<h2 id="4-10103-「一本通-3-6-练习-4」电力"><a href="#4-10103-「一本通-3-6-练习-4」电力" class="headerlink" title="4.10103. 「一本通 3.6 练习 4」电力"></a>4.10103. 「一本通 3.6 练习 4」电力</h2><p>跟$POJ2117$ 一样的，不写了。</p>
-<h2 id="5-P3388"><a href="#5-P3388" class="headerlink" title="5.P3388"></a>5.P3388</h2><p>求无向图的割点。<br>注意：结点为根且儿子只有一个不是割点。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">void dfs(int u,int fa){
-    dfn[u]=low[u]=++id;
-    //s.push(u);
-    int son=0;
-    for(int i=h[u];i;i=e[i].nt){
-        int v=e[i].to;
-        if(!dfn[v]){
-            son++;
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-            if(low[v]>=dfn[u]) cut[u]=1;
-        }
-        else if(v!=fa) low[u]=min(low[u],dfn[v]);
-    }
-    if(fa<0&&son==1) cut[u]=0;    //结点u为树根 且只有一个儿子 
-}
-</code></pre>
-<h2 id="6-P2863-USACO06JAN-The-Cow-Prom-S"><a href="#6-P2863-USACO06JAN-The-Cow-Prom-S" class="headerlink" title="6.P2863 [USACO06JAN]The Cow Prom S"></a>6.P2863 [USACO06JAN]The Cow Prom S</h2><p>直接一遍搜然后统计$cnt$即可。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">void dfs(int u,int fa){
-    dfn[u]=low[u]=++id;
-    vis[u]=1,s.push(u);
-    for(int v:e[u]){
-        if(!dfn[v]){
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-        }
-        else if(vis[v]) low[u]=min(low[u],dfn[v]);
-    }
-    if(dfn[u]==low[u]){    //统计cnt>1 即为结点个数大于1的强连通分量 
-        int cnt=1; 
-        vis[u]=0;
-        while(s.top()!=u){
-            cnt++,vis[s.top()]=0,s.pop();
-        }
-        s.pop();
-        if(cnt>1) ans++;
-    }
-}
-</code></pre>
-<h2 id="7-P3387-【模板】缩点"><a href="#7-P3387-【模板】缩点" class="headerlink" title="7.P3387 【模板】缩点"></a>7.P3387 【模板】缩点</h2><p>思路：缩点转$DAG$图跑$dp$或者拓扑即可。</p>
-<p>$dp$写法：</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">#include<bits/stdc++.h>
+<h2 id="例题：-U55950-【模板】扩展欧拉定理"><a href="#例题：-U55950-【模板】扩展欧拉定理" class="headerlink" title="例题： U55950 【模板】扩展欧拉定理"></a>例题： U55950 【模板】扩展欧拉定理</h2><pre class=" language-lang-cpp"><code class="language-lang-cpp">#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const int N=1e4+5,M=2e4+5,inf=0x3f3f3f3f,mod=1e9+7;
+const int N=1e3+5,M=2e4+5,inf=0x3f3f3f3f,mod=1e9+7;
 #define mst(a,b) memset(a,b,sizeof a)
 #define PII pair<int,int>
 #define fi first
 #define se second
 #define pb push_back
-int n,m,id,cnt;
-int a[N],dfn[N],low[N],vis[N],bl[N],b[N];
-vector<int>e[N],ne[N];
-stack<int>s;
-void dfs(int u,int fa){
-    dfn[u]=low[u]=++id;
-    vis[u]=1,s.push(u);
-    for(int v:e[u]){
-        if(!dfn[v]){
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-        }
-        else if(vis[v]) low[u]=min(low[u],dfn[v]);
+bool f;
+inline void read(ll &s){
+    int w=1;char c;
+    while(c=getchar(),!isdigit(c)){
+        if(c=='-') w=-1;
     }
-    if(dfn[u]==low[u]){    
-        bl[u]=++cnt,b[cnt]+=a[u]; 
-        vis[u]=0;
-        while(s.top()!=u){
-            vis[s.top()]=0,bl[s.top()]=cnt,b[cnt]+=a[s.top()],s.pop();
-        }
-        s.pop();
-    }
+    while(isdigit(c)) s=(s<<3)+(s<<1)+(c&15),c=getchar();
+    s*=w;
 }
-int f[N];
-void fun(int u){
-    if(f[u]) return;
-    f[u]+=b[u];int mx=0;
-    for(int v:ne[u]){
-        if(!f[v]) fun(v);
-        mx=max(mx,f[v]);
+inline ll readm(ll m){
+    ll s=0;char c;while(c=getchar(),!isdigit(c)) ;
+    while(isdigit(c)){
+        s=(s<<3)+(s<<1)+(c&15);
+        if(s>=m){
+            s%=m;
+            f=true;        
+        }
+        c=getchar();
     }
-    f[u]+=mx;
+    return s;
 }
-int main(){
-    scanf("%d%d",&n,&m);for(int i=1;i<=n;i++) scanf("%d",&a[i]);
-    for(int i=1,u,v;i<=m;i++){
-        scanf("%d%d",&u,&v),e[u].pb(v);
-    }
-    for(int i=1;i<=n;i++){
-        if(!dfn[i]) dfs(i,-1);
-    }
-    for(int u=1;u<=n;u++){
-        for(int v:e[u]){
-            if(bl[u]!=bl[v]){
-                ne[bl[u]].pb(bl[v]);
-            }
+ll phi(ll n){
+    ll s=n;
+    for(ll i=2;i*i<=n;i++){
+        if(n%i==0){
+            s-=s/i;
+            while(n%i==0) n/=i;
         }
     }
-    int ans=0;
-    for(int i=1;i<=n;i++){
-        if(!f[i]){
-            fun(i);
-            ans=max(ans,f[i]);
-        }
-    }
-    printf("%d\n",ans);
-    return 0;
+    if(n>1) s-=s/n;return s;
 }
-</code></pre>
-<p>拓扑写法：</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">int topo(){
-    queue<int>q;
-    for(int i=1;i<=cnt;i++) if(!in[i]) q.push(i),f[i]=b[i];
-    while(!q.empty()){
-        int u=q.front();q.pop();
-        for(int v:ne[u]){
-            in[v]--;
-            f[v]=max(f[v],f[u]+b[v]);
-            if(!in[v]) q.push(v);
-        }
+ll qmul(ll x,ll y,ll m){    //龟速乘 
+    ll s=0;
+    while(y){
+        if(y&1) s=(s+x)%m;
+        x=(x+x)%m;
+        y>>=1; 
     }
-    int ans=0;
-    for(int i=1;i<=cnt;i++)  ans=max(ans,f[i]);
+    return s;
+}
+ll a,m,b;
+ll ksm(ll a,ll n,ll m){
+    ll ans=1;
+    while(n){
+        if(n&1) ans=qmul(ans,a,m);
+        a=qmul(a,a,m);
+        n>>=1;
+    }
     return ans;
 }
-</code></pre>
-<h2 id="8-P2341-HAOI2006-受欢迎的牛-G"><a href="#8-P2341-HAOI2006-受欢迎的牛-G" class="headerlink" title="8. P2341 HAOI2006 受欢迎的牛 G"></a>8. P2341 HAOI2006 受欢迎的牛 G</h2><p>思路：有向图先缩点，然后判断每个点出度是否为0，如果出现一个以上的点出度为0，说明不可能有能被所有其他点遍历的点，否则那个一点肯定是能被其他点遍历到的点，因为其他点一直有出度可以出去，直到找到那个点就停止。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">for(int u=1;u<=n;u++){
-        for(int v:e[u]){
-            if(bl[u]!=bl[v]){
-                out[bl[u]]++;
-            }
-        }
-    }
-    int f=0;
-    for(int i=1;i<=cnt;i++){
-        if(!f&&!out[i]){
-            f=i;
-        }
-        else if(!out[i]){
-            return printf("0\n"),0;
-        }
-    }
-</code></pre>
-<h2 id="9-P2746-USACO5-3-校园网Network-of-Schools"><a href="#9-P2746-USACO5-3-校园网Network-of-Schools" class="headerlink" title="9.P2746 [USACO5.3]校园网Network of Schools"></a>9.P2746 [USACO5.3]校园网Network of Schools</h2><p>思路：任务$A$答案就是入度为$0$的点，因为这些点不能由其他点分发过来，<br>任务$B$就是取入度为0点的个数和出度为0的点个数的最大值，但是需要注意的是如果图本身是一个环的话就不需要再扩展了。</p>
-<pre class=" language-lang-cpp"><code class="language-lang-cpp">    for(int u=1;u<=n;u++){
-        for(int v:e[u]){
-            if(bl[u]!=bl[v]){
-                in[bl[v]]++,out[bl[u]]++;
-            }
-        }
-    }
-    int tot=0,tmp=0;
-    for(int i=1;i<=cnt;i++){
-        if(!in[i]) tot++;
-        if(!out[i]) tmp++;
-    }
-    printf("%d\n",tot);
-    if(cnt==1) printf("0\n");
-    else printf("%d\n",max(tot,tmp));
+int main(){
+    read(a),read(m);ll phim=phi(m);b=readm(phim);
+    printf("%lld\n",ksm(a,b+(f?phim:0),m));
+    return 0;
+}
 </code></pre>
 
             </div>
@@ -767,7 +603,7 @@ int main(){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/">http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="http://harris-h.github.io/2020/11/22/ksm-slowpow/">http://harris-h.github.io/2020/11/22/ksm-slowpow/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -972,9 +808,10 @@ int main(){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/22/ksm-slowpow/">
                     <div class="card-image">
@@ -992,9 +829,9 @@ int main(){
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1003,6 +840,7 @@ int main(){
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1013,13 +851,13 @@ int main(){
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/My-New-Post/">
+                <a href="/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="My New Post">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Tarjan的学习">
                         
-                        <span class="card-title">My New Post</span>
+                        <span class="card-title">Tarjan的学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

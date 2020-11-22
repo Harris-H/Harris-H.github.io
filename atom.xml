@@ -6,7 +6,7 @@
   <link href="http://harris-h.github.io/atom.xml" rel="self"/>
   
   <link href="http://harris-h.github.io/"/>
-  <updated>2020-11-22T04:44:22.465Z</updated>
+  <updated>2020-11-22T09:20:40.238Z</updated>
   <id>http://harris-h.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>取模意义的快速幂黑科技：龟速乘</title>
+    <link href="http://harris-h.github.io/2020/11/22/ksm-slowpow/"/>
+    <id>http://harris-h.github.io/2020/11/22/ksm-slowpow/</id>
+    <published>2020-11-22T09:20:24.000Z</published>
+    <updated>2020-11-22T09:20:40.238Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot; language-lang-cpp&quot;&gt;&lt;code class=&quot;language-lang-cpp&quot;&gt;ll ksm(ll a,ll n,ll m){
+    ll ans=1;
+   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Tarjan的学习</title>
     <link href="http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
     <id>http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/</id>
     <published>2020-11-22T04:43:24.000Z</published>
-    <updated>2020-11-22T04:44:22.465Z</updated>
+    <updated>2020-11-22T09:14:58.259Z</updated>
     
     
       
