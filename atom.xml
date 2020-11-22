@@ -29,9 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot; language-lang-cpp&quot;&gt;&lt;code class=&quot;language-lang-cpp&quot;&gt;ll ksm(ll a,ll n,ll m){
-    ll ans=1;
-   </summary>
+&lt;pre class=&quot;line-numbers language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll &lt;span class=&quot;token</summary>
         
       
     
