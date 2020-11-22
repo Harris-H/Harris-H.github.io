@@ -32,7 +32,7 @@
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Harris-H" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 
@@ -484,116 +484,116 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><strong>一般的快速幂：</strong></p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll ksm(ll a,ll n,ll m){
-	ll ans=1;
-	while(n){
-		if(n&amp;1) ans=ans*a%m;
-		a=a*a%m;
-		n&gt;&gt;=1;
-	}
-	return ans;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll <span class="token function">ksm</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll n<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ll ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> ans<span class="token operator">=</span>ans<span class="token operator">*</span>a<span class="token operator">%</span>m<span class="token punctuation">;</span>
+		a<span class="token operator">=</span>a<span class="token operator">*</span>a<span class="token operator">%</span>m<span class="token punctuation">;</span>
+		n<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样会存在一个问题，当求$a^b\pmod{m}，$且$a&gt;10^9$时，会存在爆$long\ long$的问题，这时候我们需要对乘法取模进行改正，于是便有了龟速乘。</p>
 <hr>
 <p><strong>龟速乘：</strong></p>
 <p>为什么要叫龟速乘呢，因为这个乘法运算比计算机底层的乘法速度要慢。<br>先看代码：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll qmul(ll x,ll y,ll m){	//龟速乘 
-	ll s=0;
-	while(y){
-		if(y&amp;1) s=(s+x)%m;
-		x=(x+x)%m;
-		y&gt;&gt;=1; 
-	}
-	return s;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll <span class="token function">qmul</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span>ll y<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>	<span class="token comment">//龟速乘 </span>
+	ll s<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> s<span class="token operator">=</span><span class="token punctuation">(</span>s<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		x<span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		y<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>形式与快速幂非常相似，只不过里面的乘法变成加法了，<br>比如$2\times 5= 2+2\times 4=2+4\times 2=2+8=10$。</p>
 <p>时间复杂度：$O(logy)$</p>
 <p>快速幂和龟速乘搭配一起就可以欢乐地进行模意义下的快速幂了。</p>
 <p>复杂度：$O(logn\times log(a))$</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll qmul(ll x,ll y,ll m){	//龟速乘 
-	ll s=0;
-	while(y){
-		if(y&amp;1) s=(s+x)%m;
-		x=(x+x)%m;
-		y&gt;&gt;=1; 
-	}
-	return s;
-}
-///////////////
-ll ksm(ll a,ll n,ll m){
-	ll ans=1;
-	while(n){
-		if(n&amp;1) ans=qmul(ans,a,m);
-		a=qmul(a,a,m);
-		n&gt;&gt;=1;
-	}
-	return ans;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll <span class="token function">qmul</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span>ll y<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>	<span class="token comment">//龟速乘 </span>
+	ll s<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> s<span class="token operator">=</span><span class="token punctuation">(</span>s<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		x<span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		y<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">///////////////</span>
+ll <span class="token function">ksm</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll n<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ll ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> ans<span class="token operator">=</span><span class="token function">qmul</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		a<span class="token operator">=</span><span class="token function">qmul</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		n<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h2 id="例题：-U55950-【模板】扩展欧拉定理"><a href="#例题：-U55950-【模板】扩展欧拉定理" class="headerlink" title="例题： U55950 【模板】扩展欧拉定理"></a>例题： U55950 【模板】扩展欧拉定理</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-const int N=1e3+5,M=2e4+5,inf=0x3f3f3f3f,mod=1e9+7;
-#define mst(a,b) memset(a,b,sizeof a)
-#define PII pair&lt;int,int&gt;
-#define fi first
-#define se second
-#define pb push_back
-bool f;
-inline void read(ll &amp;s){
-	int w=1;char c;
-	while(c=getchar(),!isdigit(c)){
-		if(c=='-') w=-1;
-	}
-	while(isdigit(c)) s=(s&lt;&lt;3)+(s&lt;&lt;1)+(c&amp;15),c=getchar();
-	s*=w;
-}
-inline ll readm(ll m){
-	ll s=0;char c;while(c=getchar(),!isdigit(c)) ;
-	while(isdigit(c)){
-		s=(s&lt;&lt;3)+(s&lt;&lt;1)+(c&amp;15);
-		if(s&gt;=m){
-			s%=m;
-			f=true;		
-		}
-		c=getchar();
-	}
-	return s;
-}
-ll phi(ll n){
-	ll s=n;
-	for(ll i=2;i*i&lt;=n;i++){
-		if(n%i==0){
-			s-=s/i;
-			while(n%i==0) n/=i;
-		}
-	}
-	if(n&gt;1) s-=s/n;return s;
-}
-ll qmul(ll x,ll y,ll m){	//龟速乘 
-	ll s=0;
-	while(y){
-		if(y&amp;1) s=(s+x)%m;
-		x=(x+x)%m;
-		y&gt;&gt;=1; 
-	}
-	return s;
-}
-ll a,m,b;
-ll ksm(ll a,ll n,ll m){
-	ll ans=1;
-	while(n){
-		if(n&amp;1) ans=qmul(ans,a,m);
-		a=qmul(a,a,m);
-		n&gt;&gt;=1;
-	}
-	return ans;
-}
-int main(){
-	read(a),read(m);ll phim=phi(m);b=readm(phim);
-	printf("%lld\n",ksm(a,b+(f?phim:0),m));
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="例题：-U55950-【模板】扩展欧拉定理"><a href="#例题：-U55950-【模板】扩展欧拉定理" class="headerlink" title="例题： U55950 【模板】扩展欧拉定理"></a>例题： U55950 【模板】扩展欧拉定理</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e3</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>M<span class="token operator">=</span><span class="token number">2e4</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>inf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">,</span>mod<span class="token operator">=</span><span class="token number">1e9</span><span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression"><span class="token function">mst</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token function">memset</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token keyword">sizeof</span> a<span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">PII pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">fi first</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">se second</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">pb push_back</span></span>
+<span class="token keyword">bool</span> f<span class="token punctuation">;</span>
+<span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">read</span><span class="token punctuation">(</span>ll <span class="token operator">&amp;</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">int</span> w<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">char</span> c<span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">!</span><span class="token function">isdigit</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>c<span class="token operator">==</span><span class="token string">'-'</span><span class="token punctuation">)</span> w<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">isdigit</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span> s<span class="token operator">=</span><span class="token punctuation">(</span>s<span class="token operator">&lt;&lt;</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span>s<span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span>c<span class="token operator">&amp;</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	s<span class="token operator">*=</span>w<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">inline</span> ll <span class="token function">readm</span><span class="token punctuation">(</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ll s<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">char</span> c<span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">!</span><span class="token function">isdigit</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">isdigit</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		s<span class="token operator">=</span><span class="token punctuation">(</span>s<span class="token operator">&lt;&lt;</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span>s<span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span>c<span class="token operator">&amp;</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token operator">&gt;=</span>m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			s<span class="token operator">%=</span>m<span class="token punctuation">;</span>
+			f<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>		
+		<span class="token punctuation">}</span>
+		c<span class="token operator">=</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">phi</span><span class="token punctuation">(</span>ll n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ll s<span class="token operator">=</span>n<span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			s<span class="token operator">-=</span>s<span class="token operator">/</span>i<span class="token punctuation">;</span>
+			<span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> n<span class="token operator">/=</span>i<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> s<span class="token operator">-=</span>s<span class="token operator">/</span>n<span class="token punctuation">;</span><span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">qmul</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span>ll y<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>	<span class="token comment">//龟速乘 </span>
+	ll s<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> s<span class="token operator">=</span><span class="token punctuation">(</span>s<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		x<span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">%</span>m<span class="token punctuation">;</span>
+		y<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll a<span class="token punctuation">,</span>m<span class="token punctuation">,</span>b<span class="token punctuation">;</span>
+ll <span class="token function">ksm</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll n<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	ll ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> ans<span class="token operator">=</span><span class="token function">qmul</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		a<span class="token operator">=</span><span class="token function">qmul</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		n<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token function">read</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">read</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>ll phim<span class="token operator">=</span><span class="token function">phi</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">=</span><span class="token function">readm</span><span class="token punctuation">(</span>phim<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span><span class="token function">ksm</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token operator">+</span><span class="token punctuation">(</span>f<span class="token operator">?</span>phim<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr/>
