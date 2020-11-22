@@ -29,9 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot; language-lang-cpp&quot;&gt;&lt;code class=&quot;language-lang-cpp&quot;&gt;ll ksm(ll a,ll n,ll m){
-    ll ans=1;
-   </summary>
+&lt;pre class=&quot;line-numbers language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll &lt;span class=&quot;token</summary>
         
       
     
@@ -42,8 +40,8 @@
   
   <entry>
     <title>Tarjan的学习</title>
-    <link href="http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://harris-h.github.io/2020/11/22/Tarjan%E7%9A%84%E5%AD%A6%E4%B9%A0/</id>
+    <link href="http://harris-h.github.io/2020/11/22/Tarjan-study/"/>
+    <id>http://harris-h.github.io/2020/11/22/Tarjan-study/</id>
     <published>2020-11-22T04:43:24.000Z</published>
     <updated>2020-11-22T09:14:58.259Z</updated>
     
