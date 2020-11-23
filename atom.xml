@@ -29,7 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll ksm(ll a,ll n,ll</summary>
+&lt;pre class=&quot;line-numbers language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll &lt;span class=&quot;token</summary>
         
       
     
@@ -67,7 +67,7 @@
     <link href="http://harris-h.github.io/2020/11/22/moving-home/"/>
     <id>http://harris-h.github.io/2020/11/22/moving-home/</id>
     <published>2020-11-22T00:20:24.000Z</published>
-    <updated>2020-11-22T14:56:29.030Z</updated>
+    <updated>2020-11-23T12:38:44.617Z</updated>
     
     
       
