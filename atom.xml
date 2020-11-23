@@ -39,6 +39,30 @@
   </entry>
   
   <entry>
+    <title>Tarjan的学习</title>
+    <link href="http://harris-h.github.io/2020/11/22/tarjan-study/"/>
+    <id>http://harris-h.github.io/2020/11/22/tarjan-study/</id>
+    <published>2020-11-22T04:43:24.000Z</published>
+    <updated>2020-11-22T09:14:58.259Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;$Tarjan$是图论中求解关于图的连通性的相关问题的算法，$Tarjan$基于深搜$dfs$实现。&lt;/p&gt;
+&lt;p&gt;利用两个关键数组：$dfn[],low[]$。&lt;/p&gt;
+&lt;p&gt;$dfn[i]:$结点$i$的时间戳。&lt;/p&gt;
+&lt;p&gt;$low[i]:$结点$i$所能遍历的所有</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>我的博客要搬家了</title>
     <link href="http://harris-h.github.io/2020/11/22/moving-home/"/>
     <id>http://harris-h.github.io/2020/11/22/moving-home/</id>
