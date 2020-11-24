@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Harris-H</title>
+  
+  <subtitle>Motto</subtitle>
+  <link href="http://harris-h.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://harris-h.github.io/"/>
+  <updated>2020-11-22T09:20:40.238Z</updated>
+  <id>http://harris-h.github.io/</id>
+  
+  <author>
+    <name>Harris-H</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>取模意义的快速幂黑科技：龟速乘</title>
+    <link href="http://harris-h.github.io/2020/11/22/ksm-slowpow/"/>
+    <id>http://harris-h.github.io/2020/11/22/ksm-slowpow/</id>
+    <published>2020-11-22T09:20:24.000Z</published>
+    <updated>2020-11-22T09:20:40.238Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tarjan的学习</title>
+    <link href="http://harris-h.github.io/2020/11/22/tarjan-study/"/>
+    <id>http://harris-h.github.io/2020/11/22/tarjan-study/</id>
+    <published>2020-11-22T04:43:24.000Z</published>
+    <updated>2020-11-22T09:14:58.259Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;$Tarjan$是图论中求解关于图的连通性的相关问题的算法，$Tarjan$基于深搜$dfs$实现。&lt;/p&gt;
+&lt;p&gt;利用两个关键数组：$dfn[],low[]$。&lt;/p&gt;
+&lt;p&gt;$dfn[i]:$结点$i$的时间戳。&lt;/p&gt;
+&lt;p&gt;$low[i]:$结点$i$所能遍历的所有</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的博客要搬家了</title>
+    <link href="http://harris-h.github.io/2020/11/22/moving-home/"/>
+    <id>http://harris-h.github.io/2020/11/22/moving-home/</id>
+    <published>2020-11-22T00:20:24.000Z</published>
+    <updated>2020-11-23T12:38:44.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;我的博客准备搬家了&quot;&gt;&lt;a href=&quot;#我的博客准备搬家了&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
