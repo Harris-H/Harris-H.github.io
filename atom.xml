@@ -29,7 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+&lt;pre class=&quot; language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll &lt;span class=&quot;token function&quot;&gt;ksm&lt;/span&gt;&lt;span</summary>
         
       
     
