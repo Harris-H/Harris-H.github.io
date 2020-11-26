@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="我的博客要搬家了, Harris-H">
+    <meta name="keywords" content="Barn Painting(树形dp), Harris-H">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的博客要搬家了 | Harris-H</title>
+    <title>Barn Painting(树形dp) | Harris-H</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/libs/awesome/css/all.css">
@@ -422,12 +422,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的博客要搬家了</h1>
+                    <h1 class="description center-align post-title">Barn Painting(树形dp)</h1>
                 </div>
             </div>
         </div>
@@ -542,12 +542,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/dp/">
+                                <span class="chip bg-color">dp</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/dp/" class="post-category">
+                                dp
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -556,7 +569,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-22
+                    2020-11-26
                 </div>
                 
 
@@ -570,7 +583,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    32
+                    238
                 </div>
                 
 
@@ -592,10 +605,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="我的博客准备搬家了"><a href="#我的博客准备搬家了" class="headerlink" title="我的博客准备搬家了"></a>我的博客准备搬家了</h1><p><strong>hexo</strong>真是太好玩了，继续$Working$中。</p>
-<pre class=" language-cpp"><code class="language-cpp">include<span class="token operator">&lt;</span>bits<span class="token operator">/</span>stdc<span class="token operator">++</span><span class="token punctuation">.</span>h<span class="token operator">></span>
+                <h1 id="Barn-Painting"><a href="#Barn-Painting" class="headerlink" title="Barn Painting"></a>Barn Painting</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>简单的树形$dp$，标记已经涂好色的点就行了。</p>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e5</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>M<span class="token operator">=</span><span class="token number">2e4</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>inf<span class="token operator">=</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">,</span>mod<span class="token operator">=</span><span class="token number">1e9</span><span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> mst(a,b) memset(a,b,sizeof a)</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> PII pair&lt;int,int></span>
+<span class="token macro property">#<span class="token directive keyword">define</span> fi first</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> se second</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> pb push_back</span>
+<span class="token keyword">int</span> vis<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>k<span class="token punctuation">;</span>
+vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span>e<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> u<span class="token punctuation">,</span><span class="token keyword">int</span> fa<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>vis<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span> dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>vis<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span>dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> v<span class="token operator">:</span>e<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>v<span class="token operator">==</span>fa<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token function">dfs</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1LL</span><span class="token operator">*</span>dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
+        dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1LL</span><span class="token operator">*</span>dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
+        dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1LL</span><span class="token operator">*</span>dp<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>u<span class="token punctuation">,</span>v<span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>u<span class="token punctuation">,</span><span class="token operator">&amp;</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span>e<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">pb</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span>e<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">pb</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>u<span class="token punctuation">,</span>v<span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>k<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>u<span class="token punctuation">,</span><span class="token operator">&amp;</span>v<span class="token punctuation">)</span><span class="token punctuation">,</span>vis<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token operator">=</span>v<span class="token punctuation">;</span><span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token number">1LL</span><span class="token operator">*</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>dp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 
@@ -623,7 +661,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://harris-h.github.io/2020/11/22/moving-home/">http://harris-h.github.io/2020/11/22/moving-home/</a>
+                    <a href="http://harris-h.github.io/2020/11/26/barn-painting/">http://harris-h.github.io/2020/11/26/barn-painting/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -660,7 +698,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/dp/">
+                                    <span class="chip bg-color">dp</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1095,33 +1137,29 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/tarjan-study/">
+                <a href="/2020/11/26/modern-art/">
                     <div class="card-image">
                         
                         
-                        <img src="./images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="Tarjan的学习">
+                        <img src="./images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="Modern Art(差分)">
                         
-                        <span class="card-title">Tarjan的学习</span>
+                        <span class="card-title">Modern Art(差分)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            tarjan知识点和题目的整理
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%9B%BE%E8%AE%BA/" class="post-category">
-                                    图论
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harris-H
                             
                         </span>
                     </div>
@@ -1129,8 +1167,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tarjan/">
-                        <span class="chip bg-color">tarjan</span>
+                    <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">
+                        <span class="chip bg-color">前缀和</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B7%AE%E5%88%86/">
+                        <span class="chip bg-color">差分</span>
                     </a>
                     
                 </div>
@@ -1141,37 +1183,48 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/moving-home/">
+                <a href="/2020/11/26/bovine-benomics-gold/">
                     <div class="card-image">
                         
                         
-                        <img src="./images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="我的博客要搬家了">
+                        <img src="./images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="Bovine Genomics (Gold)">
                         
-                        <span class="card-title">我的博客要搬家了</span>
+                        <span class="card-title">Bovine Genomics (Gold)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搬家了!
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Harris-H
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BA%8C%E5%88%86/" class="post-category">
+                                    二分
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86/">
+                        <span class="chip bg-color">二分</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
