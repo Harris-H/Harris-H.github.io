@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>一道关于距离和的数学题</title>
+      <link href="2020/11/30/math-01/"/>
+      <url>2020/11/30/math-01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一道关于距离和的数学题"><a href="#一道关于距离和的数学题" class="headerlink" title="一道关于距离和的数学题"></a>一道关于距离和的数学题</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定数轴上$n$个点$a_i,i\in[1,n]$，$(a_i&lt;a_{i+1},i&lt;n)$求$sum=\sum\limits_{i=1}^n|x-a_i|$的最小值。</p><hr><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1.从$-\infty$开始向右移动，显然移动$\triangle x$，$sum$是递减的，继续往右移动，当左边的点等于右边的点时达到最小值，继续往右移动，$sum$会递增。</p><p>所以需要讨论$n$的奇偶性。</p><p>当$n=2k-1$时，显然$x=k$取最小值，为</p><p>$\sum\limits_{i=1}^{k-1} (a_{n+1-i}-a_i)$</p><p>当$n=2k$时，$x\in[k,k+1]$之间都可以取到最小值，为</p><p>$\sum\limits_{i=1}^{k} (a_{n+1-i}-a_i)$</p><hr><p>2.由绝对值不等式：$|a|+|b|\ge|a-b|$的取等条件：$ab\le0$</p><p>$n=2k-1$时：</p><p>$\sum\limits_{i=1}^n|x-a_i|\=(|x-a_1|+|x-a_n|)+(|x-a_2|+|x-a_{n-1}|)+\dots+|x-a_k|\\ge (a_n-a_1)+\dots+|x-a_k|$</p><p>当$x=k$时取等。</p><p>偶数同理。</p><hr><h2 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h2><p>$Butchart-Moster$定理：</p><p>设$a_1&lt;\dots&lt;a_n,\lambda_1\dots \lambda_n\in Q^+,$则$f(x)=\sum\limits_{i=1}^n\lambda_i|x-a_i|$存在唯一极小值。</p><h2 id="ACM中的应用"><a href="#ACM中的应用" class="headerlink" title="ACM中的应用"></a>ACM中的应用</h2><p>显然该数学题，可以与$ACM$中的贪心的题相联系，给定$n$个点，求距离这个$n$个点的和最小值，可以因为是个凹型函数，可以考虑三分，但是本题已经证明了只需考虑奇偶性，所以就直接贪心了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 每日数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 三分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Why Did the Cow Cross the Road III (G)</title>
       <link href="2020/11/29/why-did-the-cow-cross-the-road-iii-g/"/>
       <url>2020/11/29/why-did-the-cow-cross-the-road-iii-g/</url>
