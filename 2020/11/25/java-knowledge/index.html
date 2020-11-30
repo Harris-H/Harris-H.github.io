@@ -29,9 +29,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Harris-H/Harris-H.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Harris-H" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Harris-H" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -574,14 +574,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    850
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -602,7 +602,7 @@
 <p>4.接口可以继承接口。</p>
 <p>5.静态内部类不能访问外部类的非静态成员，内部类可以被声明为 <code>private</code> 或 <code>protected</code> ，内部类可以被定义为 <code>abstract</code>，内部类可以匿名。</p>
 <p>6.在异常处理时，如释放资源、关闭文件等最好由<code>finally</code>代码块来完成。</p>
-<p>7.子类将继承父类所有的属性和方法。</p>
+<p>子类将继承父类非私有的属性和方法。**(问过老师，考试按该知识点做题)**</p>
 <p>8.覆盖发生在父类与子类之间，而重载发生在同一个类中，覆盖和重载都要求必须同名，final修饰的方法可以重载但不能覆盖。</p>
 <p>9.<code>final</code> 修饰的成员变量必须在声明的同时赋值，如果在声明的时候没有赋值，那么只有 一次赋值的机会，而且只能在构造方法中显式赋值，然后才能使用。<code>final</code> 修饰的局部变量可以只声明不赋值，然后再进行一次性的赋值。</p>
 <p>10.</p>
@@ -639,7 +639,7 @@
 <p>17.使用客户端套接字 <code>Socket</code> 创建对象时，需要指定服务器主机名称和端口。</p>
 <hr>
 <h2 id="选择题答案："><a href="#选择题答案：" class="headerlink" title="选择题答案："></a>选择题答案：</h2><p>1-5      <code>CDB[BD]B</code>   6-10      <code>ADCDB</code></p>
-<p>11-15  <code>DBDCB</code>       16-20    <code>CBADB</code></p>
+<p>11-15  <code>[AD]BDCB</code>       16-20    <code>CBADB</code></p>
 <p>21-25  <code>CDCCD</code>       26-30    <code>CBBD</code> [无27]</p>
 <p>31-35  <code>BBADD</code>  36-40    <code>ADCBA</code></p>
 <p>41-45  <code>CCCAA</code>        46-50   <code>ADDAB</code></p>
@@ -681,13 +681,23 @@
 <p>1.所有的异常类皆继承哪一个类？</p>
 <p>答案应为：<code>Throwable</code>。</p>
 <p>若题目改为直接继承，则答案为<code>Exception</code>。</p>
+<p>$Update：2020.11.30$</p>
+<p>11 是多选<code>AD</code>，<code>super</code>是关键字，标识符不能为关键字，$3_a$以数字开头，也不行。</p>
 <p>2.以下哪个接口的定义是正确的？</p>
-<p>应该选<code>B</code>。</p>
-<p><code>abstract interface B { void print() ;}</code>  是正确的写法，去掉<code>abstract</code>也是正确的。</p>
+<p>这个题有几个不同的版本，实属有点烦，我来总结下。<br><code>B、 abstract interface B  { void print() ;}</code><br>这种接口的定义是不标准的，但是也是正确的，因为接口的默认修饰符是<code>public abstract</code>，所以省略$public$或者$abstract$也不会保存的，但是这是冗余的写法。</p>
+<p>标准的写法：<code> interface B  { void print() ;}</code></p>
+<p>如果单选题同时出现这两种，就选标准写法。</p>
+<p><code>interface  B extends A1,A2{ }</code></p>
+<p>接口是支持多继承的。</p>
+<p><strong>原因</strong></p>
+<blockquote>
+<p><font color="#008000">在Java类中，由于为了避免子类被引用的时候同一个方法无法判断应该使用哪个父类的方法，所以只能允许类单继承，但是，接口中的方法都是申明，都没有实现方法体。所以对于接口多继承接口后，如果接口中有系统的方法申明是没有关系的，最后只会保留一个。</font></p><font color="#008000">
+</font></blockquote><font color="#008000">
+<p>所以该选项是对的，如果单选题出现非标准写法选项和该选项，则选该选项，所以今年的题库$31$题正确的是<code>D</code>。</p>
 <hr>
 <p>程序填空，判断题，程序大题见往年答案，太忙了就不写了。</p>
 <p>有错误请留言指出，也可以直接联系我。</p>
-
+</font>
             </div>
             <hr/>
 
@@ -1485,7 +1495,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.6k</span>&nbsp;字
+                class="white-color">7.9k</span>&nbsp;字
             
             
             
