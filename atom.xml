@@ -6,7 +6,7 @@
   <link href="http://harris-h.github.io/atom.xml" rel="self"/>
   
   <link href="http://harris-h.github.io/"/>
-  <updated>2020-11-30T07:12:34.090Z</updated>
+  <updated>2020-12-01T09:53:16.321Z</updated>
   <id>http://harris-h.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://harris-h.github.io/2020/12/01/pat-jia-1084-to-1087/"/>
+    <id>http://harris-h.github.io/2020/12/01/pat-jia-1084-to-1087/</id>
+    <published>2020-12-01T09:53:16.193Z</published>
+    <updated>2020-12-01T09:53:16.321Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1084-Broken-Keyboard-20分&quot;&gt;&lt;a href=&quot;#1084-Broken-Keyboard-20分&quot; class=&quot;headerlink&quot; title=&quot;1084 Broken Keyboard (20分)&quot;&gt;&lt;/a&gt;1084 Broken</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1082 Read Number in Chinese</title>
+    <link href="http://harris-h.github.io/2020/12/01/pat-jia-1082/"/>
+    <id>http://harris-h.github.io/2020/12/01/pat-jia-1082/</id>
+    <published>2020-12-01T05:29:18.000Z</published>
+    <updated>2020-12-01T05:30:34.444Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1082-Read-Number-in-Chinese&quot;&gt;&lt;a href=&quot;#1082-Read-Number-in-Chinese&quot; class=&quot;headerlink&quot; title=&quot;1082 Read Number in Chinese&quot;&gt;&lt;/a&gt;1082</summary>
+        
+      
+    
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/tags/PAT/"/>
+    
+  </entry>
   
   <entry>
     <title>基于二分查找的其他查找算法</title>
