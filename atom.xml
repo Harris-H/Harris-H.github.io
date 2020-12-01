@@ -6,7 +6,7 @@
   <link href="http://harris-h.github.io/atom.xml" rel="self"/>
   
   <link href="http://harris-h.github.io/"/>
-  <updated>2020-12-01T09:53:16.321Z</updated>
+  <updated>2020-12-01T09:55:13.353Z</updated>
   <id>http://harris-h.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>PAT-甲级-1084-to-1087</title>
     <link href="http://harris-h.github.io/2020/12/01/pat-jia-1084-to-1087/"/>
     <id>http://harris-h.github.io/2020/12/01/pat-jia-1084-to-1087/</id>
-    <published>2020-12-01T09:53:16.193Z</published>
-    <updated>2020-12-01T09:53:16.321Z</updated>
+    <published>2020-12-01T09:54:18.000Z</published>
+    <updated>2020-12-01T09:55:13.353Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="PAT" scheme="http://harris-h.github.io/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/tags/PAT/"/>
     
   </entry>
   
