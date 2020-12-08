@@ -6,7 +6,7 @@
   <link href="http://harris-h.github.io/atom.xml" rel="self"/>
   
   <link href="http://harris-h.github.io/"/>
-  <updated>2020-12-03T14:31:58.485Z</updated>
+  <updated>2020-12-08T08:30:39.090Z</updated>
   <id>http://harris-h.github.io/</id>
   
   <author>
@@ -15,6 +15,102 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://harris-h.github.io/2020/12/08/why-did-the-cow-cross-the-road/"/>
+    <id>http://harris-h.github.io/2020/12/08/why-did-the-cow-cross-the-road/</id>
+    <published>2020-12-08T08:30:38.882Z</published>
+    <updated>2020-12-08T08:30:39.090Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Why-Did-the-Cow-Cross-the-Road-P&quot;&gt;&lt;a href=&quot;#Why-Did-the-Cow-Cross-the-Road-P&quot; class=&quot;headerlink&quot; title=&quot;Why Did the Cow Cross the</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>I.营养需求</title>
+    <link href="http://harris-h.github.io/2020/12/08/i-nutritional-needs/"/>
+    <id>http://harris-h.github.io/2020/12/08/i-nutritional-needs/</id>
+    <published>2020-12-08T08:25:18.000Z</published>
+    <updated>2020-12-08T08:26:34.806Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;I-营养需求&quot;&gt;&lt;a href=&quot;#I-营养需求&quot; class=&quot;headerlink&quot; title=&quot;I.营养需求&quot;&gt;&lt;/a&gt;I.营养需求&lt;/h2&gt;&lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="贪心" scheme="http://harris-h.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="暴力" scheme="http://harris-h.github.io/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT 甲级 1120-1123</title>
+    <link href="http://harris-h.github.io/2020/12/04/pat-jia-1120-1123/"/>
+    <id>http://harris-h.github.io/2020/12/04/pat-jia-1120-1123/</id>
+    <published>2020-12-04T04:15:18.000Z</published>
+    <updated>2020-12-04T04:15:56.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1120-Friend-Numbers-20分&quot;&gt;&lt;a href=&quot;#1120-Friend-Numbers-20分&quot; class=&quot;headerlink&quot; title=&quot;1120 Friend Numbers (20分)&quot;&gt;&lt;/a&gt;1120 Friend</summary>
+        
+      
+    
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PAT 甲级 1116-1119</title>
+    <link href="http://harris-h.github.io/2020/12/04/pat-jia-1116-to-1119/"/>
+    <id>http://harris-h.github.io/2020/12/04/pat-jia-1116-to-1119/</id>
+    <published>2020-12-04T02:32:18.000Z</published>
+    <updated>2020-12-04T02:33:29.474Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1116-Come-on-Let’s-C-20分&quot;&gt;&lt;a href=&quot;#1116-Come-on-Let’s-C-20分&quot; class=&quot;headerlink&quot; title=&quot;1116 Come on! Let’s C (20分)&quot;&gt;&lt;/a&gt;1116 Come</summary>
+        
+      
+    
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/categories/PAT/"/>
+    
+    
+    <category term="PAT" scheme="http://harris-h.github.io/tags/PAT/"/>
+    
+  </entry>
   
   <entry>
     <title>PAT 甲级 1112-1115</title>
@@ -403,77 +499,6 @@
     
     
     <category term="图论" scheme="http://harris-h.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>取模意义的快速幂黑科技：龟速乘</title>
-    <link href="http://harris-h.github.io/2020/11/22/ksm-slowpow/"/>
-    <id>http://harris-h.github.io/2020/11/22/ksm-slowpow/</id>
-    <published>2020-11-22T09:20:24.000Z</published>
-    <updated>2020-11-22T09:20:40.238Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;一般的快速幂：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot; language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;ll &lt;span class=&quot;token function&quot;&gt;ksm&lt;/span&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Tarjan的学习</title>
-    <link href="http://harris-h.github.io/2020/11/22/tarjan-study/"/>
-    <id>http://harris-h.github.io/2020/11/22/tarjan-study/</id>
-    <published>2020-11-22T04:43:24.000Z</published>
-    <updated>2020-11-26T13:27:31.298Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;$Tarjan$是图论中求解关于图的连通性的相关问题的算法，$Tarjan$基于深搜$dfs$实现。&lt;/p&gt;
-&lt;p&gt;利用两个关键数组：$dfn[],low[]$。&lt;/p&gt;
-&lt;p&gt;$dfn[i]:$结点$i$的时间戳。&lt;/p&gt;
-&lt;p&gt;$low[i]:$结点$i$所能遍历的所有</summary>
-        
-      
-    
-    
-    
-    <category term="图论" scheme="http://harris-h.github.io/categories/%E5%9B%BE%E8%AE%BA/"/>
-    
-    
-    <category term="tarjan" scheme="http://harris-h.github.io/tags/tarjan/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的博客要搬家了</title>
-    <link href="http://harris-h.github.io/2020/11/22/moving-home/"/>
-    <id>http://harris-h.github.io/2020/11/22/moving-home/</id>
-    <published>2020-11-22T00:20:24.000Z</published>
-    <updated>2020-11-26T13:28:25.934Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;我的博客准备搬家了&quot;&gt;&lt;a href=&quot;#我的博客准备搬家了&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
