@@ -6,7 +6,7 @@
   <link href="http://harris-h.github.io/atom.xml" rel="self"/>
   
   <link href="http://harris-h.github.io/"/>
-  <updated>2021-03-17T13:17:40.931Z</updated>
+  <updated>2021-03-25T15:07:37.822Z</updated>
   <id>http://harris-h.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARC 115</title>
+    <link href="http://harris-h.github.io/2021/03/25/arc-115/"/>
+    <id>http://harris-h.github.io/2021/03/25/arc-115/</id>
+    <published>2021-03-25T15:07:18.000Z</published>
+    <updated>2021-03-25T15:07:37.822Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ARC-115&quot;&gt;&lt;a href=&quot;#ARC-115&quot; class=&quot;headerlink&quot; title=&quot;ARC 115&quot;&gt;&lt;/a&gt;ARC</summary>
+        
+      
+    
+    
+    
+    <category term="ARC" scheme="http://harris-h.github.io/categories/ARC/"/>
+    
+    
+    <category term="ARC" scheme="http://harris-h.github.io/tags/ARC/"/>
+    
+  </entry>
   
   <entry>
     <title>认识实习资料</title>
@@ -478,29 +503,6 @@
     
     
     <category term="BIT" scheme="http://harris-h.github.io/tags/BIT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>交叉乘(前缀和)</title>
-    <link href="http://harris-h.github.io/2020/11/27/nowcoder-s2-b/"/>
-    <id>http://harris-h.github.io/2020/11/27/nowcoder-s2-b/</id>
-    <published>2020-11-27T15:08:18.000Z</published>
-    <updated>2020-11-27T15:08:18.389Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;交叉乘&quot;&gt;&lt;a href=&quot;#交叉乘&quot; class=&quot;headerlink&quot; title=&quot;交叉乘&quot;&gt;&lt;/a&gt;交叉乘&lt;/h2&gt;&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="前缀和" scheme="http://harris-h.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
     
   </entry>
   
