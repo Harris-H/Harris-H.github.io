@@ -6,7 +6,7 @@
   <link href="https://he-hao.top/atom.xml" rel="self"/>
   
   <link href="https://he-hao.top/"/>
-  <updated>2021-04-04T02:30:50.250Z</updated>
+  <updated>2021-04-04T02:43:25.318Z</updated>
   <id>https://he-hao.top/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Strange Sentences</title>
+    <link href="https://he-hao.top/2021/04/04/sentences/"/>
+    <id>https://he-hao.top/2021/04/04/sentences/</id>
+    <published>2021-04-04T02:43:18.000Z</published>
+    <updated>2021-04-04T02:43:25.318Z</updated>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    
+    <category term="emotion" scheme="https://he-hao.top/tags/emotion/"/>
+    
+  </entry>
+  
+  <entry>
     <title>遇到的问题</title>
     <link href="https://he-hao.top/2021/04/04/some-questions/"/>
     <id>https://he-hao.top/2021/04/04/some-questions/</id>
     <published>2021-04-04T02:30:18.000Z</published>
-    <updated>2021-04-04T02:30:50.250Z</updated>
+    <updated>2021-04-04T02:42:09.232Z</updated>
     
     
       
@@ -478,33 +495,6 @@
     
     
     <category term="查找算法" scheme="https://he-hao.top/tags/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一道关于距离和的数学题</title>
-    <link href="https://he-hao.top/2020/11/30/math-01/"/>
-    <id>https://he-hao.top/2020/11/30/math-01/</id>
-    <published>2020-11-30T02:44:18.000Z</published>
-    <updated>2020-11-30T02:55:23.316Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一道关于距离和的数学题&quot;&gt;&lt;a href=&quot;#一道关于距离和的数学题&quot; class=&quot;headerlink&quot; title=&quot;一道关于距离和的数学题&quot;&gt;&lt;/a&gt;一道关于距离和的数学题&lt;/h1&gt;&lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="每日数学" scheme="https://he-hao.top/categories/%E6%AF%8F%E6%97%A5%E6%95%B0%E5%AD%A6/"/>
-    
-    
-    <category term="贪心" scheme="https://he-hao.top/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="三分" scheme="https://he-hao.top/tags/%E4%B8%89%E5%88%86/"/>
     
   </entry>
   
