@@ -6,7 +6,7 @@
   <link href="https://he-hao.top/atom.xml" rel="self"/>
   
   <link href="https://he-hao.top/"/>
-  <updated>2021-04-04T02:48:49.170Z</updated>
+  <updated>2021-04-15T13:55:02.433Z</updated>
   <id>https://he-hao.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>new</title>
+    <link href="https://he-hao.top/2021/04/15/new/"/>
+    <id>https://he-hao.top/2021/04/15/new/</id>
+    <published>2021-04-15T13:51:38.000Z</published>
+    <updated>2021-04-15T13:55:02.433Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.top//abc.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Strange Sentences</title>
@@ -470,31 +491,6 @@
     
     
     <category term="PAT" scheme="https://he-hao.top/tags/PAT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于二分查找的其他查找算法</title>
-    <link href="https://he-hao.top/2020/11/30/other-search/"/>
-    <id>https://he-hao.top/2020/11/30/other-search/</id>
-    <published>2020-11-30T07:06:18.000Z</published>
-    <updated>2020-11-30T07:12:34.090Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;基于二分查找的其他查找算法&quot;&gt;&lt;a href=&quot;#基于二分查找的其他查找算法&quot; class=&quot;headerlink&quot; title=&quot;基于二分查找的其他查找算法&quot;&gt;&lt;/a&gt;基于二分查找的其他查找算法&lt;/h1&gt;&lt;h2 id=&quot;1-fibonacci​查找。&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="模板" scheme="https://he-hao.top/categories/%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="查找算法" scheme="https://he-hao.top/tags/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
