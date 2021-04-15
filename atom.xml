@@ -6,7 +6,7 @@
   <link href="https://he-hao.top/atom.xml" rel="self"/>
   
   <link href="https://he-hao.top/"/>
-  <updated>2021-04-15T14:28:52.838Z</updated>
+  <updated>2021-04-15T14:44:38.365Z</updated>
   <id>https://he-hao.top/</id>
   
   <author>
@@ -17,23 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>new</title>
-    <link href="https://he-hao.top/2021/04/15/new/"/>
-    <id>https://he-hao.top/2021/04/15/new/</id>
-    <published>2021-04-15T13:51:38.000Z</published>
-    <updated>2021-04-15T14:28:52.838Z</updated>
+    <title>关于hexo上传图片到云服务器(无需图床)</title>
+    <link href="https://he-hao.top/2021/04/15/upload-picture-to-server/"/>
+    <id>https://he-hao.top/2021/04/15/upload-picture-to-server/</id>
+    <published>2021-04-15T14:39:13.000Z</published>
+    <updated>2021-04-15T14:44:38.365Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/04/15/new/abc.png&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;关于hexo上传图片到云服务器-无需图床&quot;&gt;&lt;a href=&quot;#关于hexo上传图片到云服务器-无需图床&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
+    
+    <category term="hexo" scheme="https://he-hao.top/tags/hexo/"/>
     
   </entry>
   
