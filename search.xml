@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>奥卡姆剃刀原理</title>
+      <link href="2021/04/28/ao-ka-mu-ti-dao/"/>
+      <url>2021/04/28/ao-ka-mu-ti-dao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="奥卡姆剃刀原理"><a href="#奥卡姆剃刀原理" class="headerlink" title="奥卡姆剃刀原理"></a>奥卡姆剃刀原理</h1><p>​            这个<a href="https://baike.baidu.com/item/%E5%8E%9F%E7%90%86/85014">原理</a>称为“<strong>如无必要，勿增实体</strong>”，即“<strong>简单有效原理</strong>”。正如他在《箴言书注》2卷15题说“切勿浪费较多东西去做，用较少的东西，同样可以做好的事情。”</p><ul><li><p>在生活中，尽量用较少的假设和条件解决问题。</p></li><li><p>在编程中，尽量用更简洁，直接的代码逻辑解决问题。</p></li><li><p>但是注意能随便剔除条件，也不能剔除必要条件。</p></li></ul><hr><p>学习博客：</p><p><a href="https://blog.csdn.net/bjweimengshu/article/details/116141374?utm_source=app&amp;app_version=4.5.8">https://blog.csdn.net/bjweimengshu/article/details/116141374?utm_source=app&amp;app_version=4.5.8</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>摘抄1</title>
       <link href="2021/04/25/2021-04-25-zhaichao/"/>
       <url>2021/04/25/2021-04-25-zhaichao/</url>
