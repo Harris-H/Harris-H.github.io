@@ -6,7 +6,7 @@
   <link href="https://he-hao.top/atom.xml" rel="self"/>
   
   <link href="https://he-hao.top/"/>
-  <updated>2021-05-03T15:35:56.501Z</updated>
+  <updated>2021-07-21T03:06:20.162Z</updated>
   <id>https://he-hao.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数论专题</title>
+    <link href="https://he-hao.top/2021/07/21/math-and-number-theory/"/>
+    <id>https://he-hao.top/2021/07/21/math-and-number-theory/</id>
+    <published>2021-07-21T03:06:30.000Z</published>
+    <updated>2021-07-21T03:06:20.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数论专题&quot;&gt;&lt;a href=&quot;#数论专题&quot; class=&quot;headerlink&quot; title=&quot;数论专题&quot;&gt;&lt;/a&gt;数论专题&lt;/h1&gt;&lt;h1 id=&quot;传送门&quot;&gt;&lt;a href=&quot;#传送门&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="math" scheme="https://he-hao.top/tags/math/"/>
+    
+    <category term="number theory" scheme="https://he-hao.top/tags/number-theory/"/>
+    
+    <category term="coderforces" scheme="https://he-hao.top/tags/coderforces/"/>
+    
+  </entry>
   
   <entry>
     <title>Codeforces Global Round 14</title>
@@ -451,31 +478,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1120-Friend-Numbers-20分&quot;&gt;&lt;a href=&quot;#1120-Friend-Numbers-20分&quot; class=&quot;headerlink&quot; title=&quot;1120 Friend Numbers (20分)&quot;&gt;&lt;/a&gt;1120 Friend</summary>
-        
-      
-    
-    
-    
-    <category term="PAT" scheme="https://he-hao.top/categories/PAT/"/>
-    
-    
-    <category term="PAT" scheme="https://he-hao.top/tags/PAT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAT 甲级 1116-1119</title>
-    <link href="https://he-hao.top/2020/12/04/pat-jia-1116-to-1119/"/>
-    <id>https://he-hao.top/2020/12/04/pat-jia-1116-to-1119/</id>
-    <published>2020-12-04T02:32:18.000Z</published>
-    <updated>2020-12-04T02:33:29.474Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1116-Come-on-Let’s-C-20分&quot;&gt;&lt;a href=&quot;#1116-Come-on-Let’s-C-20分&quot; class=&quot;headerlink&quot; title=&quot;1116 Come on! Let’s C (20分)&quot;&gt;&lt;/a&gt;1116 Come</summary>
         
       
     
