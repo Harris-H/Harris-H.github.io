@@ -6,7 +6,7 @@
   <link href="https://he-hao.top/atom.xml" rel="self"/>
   
   <link href="https://he-hao.top/"/>
-  <updated>2021-07-21T03:06:20.162Z</updated>
+  <updated>2021-07-25T05:05:14.008Z</updated>
   <id>https://he-hao.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx总结</title>
+    <link href="https://he-hao.top/2021/07/25/nginx-knowledge/"/>
+    <id>https://he-hao.top/2021/07/25/nginx-knowledge/</id>
+    <published>2021-07-25T05:02:13.000Z</published>
+    <updated>2021-07-25T05:05:14.008Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Nginx总结&quot;&gt;&lt;a href=&quot;#Nginx总结&quot; class=&quot;headerlink&quot; title=&quot;Nginx总结&quot;&gt;&lt;/a&gt;Nginx总结&lt;/h1&gt;&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="nginx" scheme="https://he-hao.top/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>数论专题</title>
@@ -462,31 +485,6 @@
     <category term="贪心" scheme="https://he-hao.top/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="暴力" scheme="https://he-hao.top/tags/%E6%9A%B4%E5%8A%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAT 甲级 1120-1123</title>
-    <link href="https://he-hao.top/2020/12/04/pat-jia-1120-1123/"/>
-    <id>https://he-hao.top/2020/12/04/pat-jia-1120-1123/</id>
-    <published>2020-12-04T04:15:18.000Z</published>
-    <updated>2020-12-04T04:15:56.094Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1120-Friend-Numbers-20分&quot;&gt;&lt;a href=&quot;#1120-Friend-Numbers-20分&quot; class=&quot;headerlink&quot; title=&quot;1120 Friend Numbers (20分)&quot;&gt;&lt;/a&gt;1120 Friend</summary>
-        
-      
-    
-    
-    
-    <category term="PAT" scheme="https://he-hao.top/categories/PAT/"/>
-    
-    
-    <category term="PAT" scheme="https://he-hao.top/tags/PAT/"/>
     
   </entry>
   
